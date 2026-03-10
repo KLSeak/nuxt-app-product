@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+/* @reference "@/assets/css/main.css"; */
+
+.gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 via-blue-500 to-purple-500;
+}
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    @apply absolute w-0 h-[2px] -bottom-1 left-0 bg-current transition-all duration-300;
+}
+
+.nav-link:hover::after {
+    @apply w-full;
+}
+
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+    transition: all 0.3s ease-out;
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+    transform: translateY(-10px);
+    opacity: 0;
+}
+
+.gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 via-blue-500 to-purple-500;
+}
+
+.article-card:hover {
+    transform: translateY(-8px);
+    @apply shadow-2xl shadow-emerald-500/5;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-slide-up {
+    animation: slideUp 0.8s ease-out forwards;
+}
+
+.badge-emerald {
+    @apply px-4 py-1.5 bg-emerald-500/10 text-emerald-400 rounded-full text-sm font-semibold border border-emerald-500/20;
+  }
+
+  .publication-tag {
+    @apply text-amber-400 text-sm font-bold uppercase tracking-widest px-2 border-l border-gray-700;
+  }
+
+  .text-display {
+    @apply text-5xl md:text-6xl font-bold leading-tight bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent;
+  }
+
+  .card-glass {
+    @apply bg-gray-800/30 p-8 md:p-12 rounded-3xl border border-gray-700/50 backdrop-blur-sm;
+  }
+
+  .nav-back-link {
+    @apply inline-flex items-center gap-2 text-gray-400 hover:text-emerald-400 transition-colors;
+  }
